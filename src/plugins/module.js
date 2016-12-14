@@ -54,6 +54,7 @@ angular.module('ngCordova.plugins', [
   'ngCordova.plugins.mopubAds',
   'ngCordova.plugins.nativeAudio',
   'ngCordova.plugins.network',
+  'ngCordovaOauth',
   'ngCordova.plugins.pinDialog',
   'ngCordova.plugins.preferences',
   'ngCordova.plugins.printer',

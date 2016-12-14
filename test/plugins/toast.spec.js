@@ -19,8 +19,7 @@ describe('Service: $cordovaToast', function() {
 
     window.plugins = {
       toast: {
-        show: angular.noop,
-        hide: angular.noop
+        show: angular.noop
       }
     };
 
@@ -100,7 +99,7 @@ describe('Service: $cordovaToast', function() {
     );
   });
 
-  it('should call window\'s plugins.toast.show errorCallback when rejected', function() {
+  it('should call window\'s plugins.toast.show errorCallback when recjected', function() {
     var errorResult;
 
     spyOn(window.plugins.toast, 'show')
@@ -112,23 +111,6 @@ describe('Service: $cordovaToast', function() {
       .then(angular.noop, function (response) {
         errorResult = response;
       });
-
-    $rootScope.$digest();
-
-    expect(errorResult).toBe('error response');
-  });
-
-  it('should proxy plugins.toast.hide but never fail.', function () {
-    var errorResult;
-
-    spyOn(window.plugins.toast, 'hide')
-      .andCallFake(function () {
-        throw new Error('error response');
-      });
-
-    $cordovaToast.hide().then(angular.noop, function (response) {
-      errorResult = response;
-    });
 
     $rootScope.$digest();
 

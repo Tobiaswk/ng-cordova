@@ -85,15 +85,6 @@ ngCordovaMocks.factory('$cordovaToast', ['$q', function ($q) {
         defer.resolve();
       }
       return defer.promise;
-    },
-    hide: function () {
-      var defer = $q.defer();
-      if (this.throwsError) {
-        defer.reject('There was an error hiding the toast.');
-      } else {
-        defer.resolve();
-      }
-      return defer.promise;
     }
   };
 }]);

@@ -37,11 +37,11 @@ angular.module('ngCordova.plugins.cardIO', [])
      * Configuring defaultRespFields using $cordovaNgCardIOProvider
      *
      */
-    this.setCardIOResponseFields = function (fields) {
-      if (!fields || !angular.isArray(fields)) {
+    this.setCardIOResponseFields = function (filelds) {
+      if (!filelds || !angular.isArray(filelds)) {
         return;
       }
-      defaultRespFields = fields;
+      defaultRespFields = filelds;
     };
 
     /**

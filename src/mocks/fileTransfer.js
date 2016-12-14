@@ -31,7 +31,7 @@ ngCordovaMocks.factory('$cordovaFileTransfer', ['$q', function ($q) {
          **/
         throwsError: throwsError,
 
-        download: function (source, filePath, options, trust) {
+        download: function (source, filePath, trust, options) {
             return mockIt.call(this, 'There was an error downloading the file.');
         },
 
